@@ -9,7 +9,6 @@ namespace Cronometro
             Console.WriteLine("Cronômetro: ");
 
             Start();
-            Console.ReadKey();
         }
 
         static void Start()
@@ -18,9 +17,11 @@ namespace Cronometro
             int currentTime = 0;
 
             while(currentTime != time)
-            {                
+            {
+                Console.Clear();
                 currentTime++;
                 Console.WriteLine(currentTime);
+                Thread.Sleep(1000);
             }
         }
     }
